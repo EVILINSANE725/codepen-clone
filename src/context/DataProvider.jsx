@@ -5,7 +5,7 @@ export const DataContext = createContext();
 import React from 'react'
 
 export default function DateProvider(props) {
-    const [htmlData, setHtmlData] = useState(` <h1>Hello Myself Poorvansh !!</h1> `, '')
+    const [htmlData, setHtmlData] = useState(`<h1>Hello Myself Poorvansh !!</h1> `, '')
     const [cssData, setCssData] = useState(`h1 {
       color: #07D4C780;
     }

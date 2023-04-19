@@ -14,10 +14,6 @@ import { DataContext} from '../context/DataProvider'
 export default function Editor({language}) {
     const {htmlData, cssData, jsData, setHtmlData, setCssData, setJsData} = useContext(DataContext)
 
-    const onChangeHandler = useCallback((value, viewUpdate) => {
-        
-        console.log('value:', value);
-      }, []);
 
     const javascriptCode = <CodeMirror
                                 height="400px"
