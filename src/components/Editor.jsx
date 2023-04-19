@@ -1,4 +1,4 @@
-import {useCallback} from 'react'
+import {useCallback, useContext} from 'react'
 import { Box } from '@mui/material'
 import HtmlIcon from '@mui/icons-material/Html';
 import CssIcon from '@mui/icons-material/Css';
@@ -9,10 +9,13 @@ import CodeMirror from '@uiw/react-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import { xml } from '@codemirror/lang-xml'
 import { css } from '@codemirror/lang-css'
-import {dracula} from '@uiw/codemirror-theme-dracula'
+import { DataContext} from '../context/DataProvider'
 
 export default function Editor({language}) {
+    const {htmlData, cssData, jsData, setHtmlData, setCssData, setJsData} = useContext(DataContext)
+
     const onChangeHandler = useCallback((value, viewUpdate) => {
+        
         console.log('value:', value);
       }, []);
 
@@ -21,27 +24,27 @@ export default function Editor({language}) {
                                 minWidth='33vw'
                                 maxWidth='33vw'
                                 extensions={[javascript({jsx: true})]}
-                                value="console.log('Hello World!');"
-                                theme={dracula}
-                                onChange={onChangeHandler}
+                                value={jsData}
+                                theme='dark'
+                                onChange={(value) => setJsData(value)}
                             />
     const xmlCode = <CodeMirror
                                 height="400px"
                                 minWidth='33vw'
                                 maxWidth='33vw'
                                 extensions={[xml()]}
-                                value="<h1>Hello World!!</h1>"
-                                theme={dracula}
-                                onChange={onChangeHandler}
+                                value={htmlData}
+                                theme='dark'
+                                onChange={(e) => setHtmlData(e)}
                             />
     const cssCode = <CodeMirror
                                 height="400px"
                                 minWidth='33vw'
                                 maxWidth='33vw'
                                 extensions={[css()]}
-                                value="h1{color: aquamarine;}"
-                                theme={dracula}
-                                onChange={onChangeHandler}
+                                value={cssData}
+                                theme='dark'
+                                onChange={(e) => setCssData(e)}
                             />
   return (
     <Box className='editorBox'>

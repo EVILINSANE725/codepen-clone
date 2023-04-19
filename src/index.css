@@ -156,11 +156,11 @@ a {
 
 .editor {
   display: flex;
+  flex-grow: 1;
 }
 
 .editorBox {
   border: 5px solid #060606;
-  width: 33%;
   word-wrap: wrap;
 }
 
@@ -178,8 +178,8 @@ a {
 }
 
 .htmlIcon {
-  padding: 0 10px;
-  background-color: #242424;
+  padding: 0 10px 1px;
+  background-color: #282c34;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -188,7 +188,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #242424;
+  background-color: #282c34;
   margin: 0px 3px;
   border-radius: 5px;
   width: 30px;
