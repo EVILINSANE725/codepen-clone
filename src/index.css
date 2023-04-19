@@ -208,3 +208,26 @@ a {
 .outputFrame {
   border: none
 }
+
+.toolBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout {
+  margin: 0;
+  position: relative;
+  display: flex;
+  width: inherit;
+  padding: 3px 9px;
+  align-items: center;
+}
+
+.logoutIcon {
+  padding: 3px 8px 0px 0px;
+}
+
+.link_text {
+  margin-top: 20px;
+}

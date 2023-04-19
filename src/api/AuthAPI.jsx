@@ -23,10 +23,8 @@ export const GoogleSignInAPI = () => {
     try {
         let googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider);
-        return res
     } catch (err) {
         return err
     }
-    return res;
 }
 
