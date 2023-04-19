@@ -19,7 +19,7 @@ export default function Editor({language}) {
                                 height="400px"
                                 minWidth='33vw'
                                 maxWidth='33vw'
-                                extensions={[javascript({jsx: true})]}
+                                extensions={[javascript()]}
                                 value={jsData}
                                 theme='dark'
                                 onChange={(value) => setJsData(value)}
@@ -54,9 +54,6 @@ export default function Editor({language}) {
             </Box>
         </Box>
         <Box className='editor'>
-        {/* {(language == 'javascript') ? javascriptCode: null}
-        {(language == 'xml') ? xmlCode: null}
-        {(language == 'css') ? cssCode: null} */}
         {(language == 'javascript') ? javascriptCode: ((language == 'xml') ? xmlCode : cssCode)}
         </Box>
     </Box>

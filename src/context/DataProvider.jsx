@@ -7,7 +7,7 @@ import React from 'react'
 export default function DateProvider(props) {
     const [htmlData, setHtmlData] = useState(`<h1>Hello Myself Poorvansh !!</h1> `, '')
     const [cssData, setCssData] = useState(`h1 {
-      color: #07D4C780;
+      color: mediumaquamarine;
     }
     `, '')
     const [jsData, setJsData] = useState('console.log("Hello world!!");', '')

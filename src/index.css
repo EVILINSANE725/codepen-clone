@@ -199,3 +199,12 @@ a {
 .rightIcon:hover {
   background-color: #424242;
 }
+
+.output {
+  height: 48vh;
+  border: none;
+}
+
+.outputFrame {
+  border: none
+}
