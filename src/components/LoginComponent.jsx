@@ -23,8 +23,8 @@ function LoginComponent() {
   const [creds, setCreds] = useState();
 
   const googleSignIn = () => {
-    let response = GoogleSignInAPI();
-    console.log(response)
+      GoogleSignInAPI();
+    
   }
 
   return (

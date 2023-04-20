@@ -21,10 +21,11 @@ export const RegisterAPI = (email, password) => {
 
 export const GoogleSignInAPI = () => {
     try {
-        let googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider);
+      let googleProvider = new GoogleAuthProvider();
+      let res = signInWithPopup(auth, googleProvider);
+      return res;
     } catch (err) {
-        return err
+      return err;
     }
-}
+  };
 
