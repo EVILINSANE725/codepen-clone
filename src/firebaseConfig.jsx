@@ -7,7 +7,7 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_Key,
-  authDomain: import.meta.env.Vite_API_AuthDomain,
+  authDomain: 'codepen-clone-e0a20.firebaseapp.com',
   projectId: import.meta.env.Vite_API_ProjectId,
   storageBucket: import.meta.env.Vite_API_StorageBucket,
   messagingSenderId: import.meta.env.Vite_API_MessagingSenderId,
